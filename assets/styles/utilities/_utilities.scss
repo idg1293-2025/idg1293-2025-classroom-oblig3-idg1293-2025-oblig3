@@ -1,0 +1,22 @@
+@use '../base/global' as *;
+
+// margin
+.m-0 { margin: 0; }
+.m { margin: $spacing-m; }
+.m-l { margin: $spacing-l; }
+
+.mt { margin-top: $spacing-m; }
+.mb { margin-bottom: $spacing-m; }
+.ml { margin-left: $spacing-m; }
+.mr { margin-right: $spacing-m; }
+
+
+// padding
+.p-0 { padding: 0; }
+.p { padding: $spacing-m; }
+.p-l { padding: $spacing-l; }
+
+.pt { padding-top: $spacing-m; }
+.pb { padding-bottom: $spacing-m; }
+.pl { padding-left: $spacing-m; }
+.pr { padding-right: $spacing-m; }

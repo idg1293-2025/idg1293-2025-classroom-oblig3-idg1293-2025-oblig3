@@ -1,0 +1,105 @@
+@use '../base/global' as *;
+
+.scene3 {
+    position: relative;
+    background: linear-gradient(to bottom, $primary-color, #000814);
+    color: $text-color-light;
+    overflow: hidden;
+    z-index: 3;
+    height: 100vh;
+
+    &__text {
+        font-size: $font-l;
+        font-weight: 600;
+        max-width: 50%;
+        position: absolute;
+
+        &--first {
+            top: 10%;
+            left: 5%;
+        }
+
+        &--second {
+            top: 35%;
+            left: 10%;
+        }
+
+        &--third {
+            top: 70%;
+            left: 20%;
+        }
+    }
+
+
+    &__svg {
+        position: absolute;
+    
+        &--anchor {
+          width: 8%;
+          top: 10%;
+          left: 10%;
+          animation: floatDown 12s ease-in-out infinite;
+        }
+    
+        &--bottle {
+          width: 6%;
+          top: 20%;
+          left: 30%;
+          animation: floatDown 10s ease-in-out infinite;
+        }
+    
+        &--dirt {
+          width: 7%;
+          top: 15%;
+          right: 10%;
+          animation: floatDown 13s ease-in-out infinite;
+        }
+    
+        &--fishbone {
+          width: 6%;
+          top: 30%;
+          left: 20%;
+          animation: floatDown 11s ease-in-out infinite;
+        }
+    
+        &--oil {
+          width: 10%;
+          top: 5%;
+          right: 20%;
+          animation: floatDown 15s ease-in-out infinite;
+        }
+    
+        &--garbage {
+          width: 9%;
+          top: 35%;
+          left: 50%;
+          animation: floatDown 14s ease-in-out infinite;
+        }
+    
+        &--plastic {
+          width: 8%;
+          top: 10%;
+          left: 65%;
+          animation: floatDown 13s ease-in-out infinite;
+        }
+    
+        &--bandage {
+          width: 6%;
+          top: 25%;
+          right: 5%;
+          animation: floatDown 10s ease-in-out infinite;
+        }
+      }
+    
+      @keyframes floatDown {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 0.8;
+        }
+    
+        100% {
+          transform: translateY(120vh) rotate(360deg);
+          opacity: 0.3;
+        }
+      }
+    }

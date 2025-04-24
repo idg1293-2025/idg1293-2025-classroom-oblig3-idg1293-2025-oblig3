@@ -1,0 +1,44 @@
+@use '../base/global' as *;
+
+.scene {
+    height: 100vh;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.scene.in-view {
+    opacity: 1; 
+}
+/*
+.scene {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; 
+    opacity: 0; 
+    transform: translateY(100%); 
+    transition: transform 1s ease, opacity 1s ease;
+    z-index: 1; 
+}
+
+.scene.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scene2, .scene3, .scene4 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.scene2.in-view, .scene3.in-view, .scene4.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+*/

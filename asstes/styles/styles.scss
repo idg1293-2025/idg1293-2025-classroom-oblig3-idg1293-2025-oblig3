@@ -1,0 +1,557 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #393939;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bebas Neue", "Arial Black", sans-serif;
+  color: #393939;
+}
+
+a {
+  color: #393939;
+}
+a:hover {
+  color: #0b46b4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.scene1__svg {
+  position: absolute;
+}
+.scene1__svg--sun {
+  width: 12%;
+  top: 2%;
+  left: 2%;
+  animation: sun 5s infinite ease-in-out;
+}
+.scene1__svg--cloud {
+  width: 10%;
+  top: 5%;
+  right: 15%;
+  animation: cloud 3s linear infinite;
+}
+.scene1__svg--bird {
+  width: 5%;
+  top: 10%;
+  left: 50%;
+}
+.scene1__svg--beach {
+  width: 7%;
+  top: 43%;
+  right: 8%;
+}
+.scene1__svg--umbrella {
+  width: 7%;
+  top: 42%;
+  right: 25%;
+}
+.scene1__svg--turtle {
+  width: 5%;
+  top: 80%;
+  left: 20%;
+}
+.scene1__svg--fish1 {
+  width: 5%;
+  top: 70%;
+  right: 20%;
+}
+.scene1__svg--fish2 {
+  width: 5%;
+  top: 70%;
+  left: 10%;
+}
+.scene1__svg--wave {
+  width: 25%;
+  bottom: 0;
+  left: 40%;
+  opacity: 0.3;
+  animation: wave 5s ease-in-out infinite;
+}
+.scene1__svg--crab {
+  width: 3%;
+  top: 52%;
+  left: 40%;
+}
+.scene1__svg--turtle, .scene1__svg--fish1, .scene1__svg--fish2 {
+  animation: swim 3s ease-in-out infinite;
+}
+
+@keyframes sun {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+@keyframes cloud {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes swim {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+}
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+.scene2__svg {
+  position: absolute;
+}
+.scene2__svg--seaweed1 {
+  width: 15%;
+  bottom: 0;
+  left: 0;
+}
+.scene2__svg--seaweed2 {
+  width: 15%;
+  bottom: 0;
+  right: 2%;
+}
+.scene2__svg--dolphin {
+  width: 15%;
+  top: 20%;
+  right: 20%;
+}
+.scene2__svg--jellyfish {
+  width: 10%;
+  top: 10%;
+  right: 10%;
+}
+.scene2__svg--seabottom {
+  width: 15%;
+  bottom: 0;
+  left: 15%;
+}
+.scene2__svg--fishes {
+  width: 15%;
+  top: 40%;
+  left: 25%;
+}
+.scene2__svg--green-fish {
+  width: 8%;
+  top: 50%;
+  left: 8%;
+}
+
+.scene3__svg {
+  position: absolute;
+}
+.scene3__svg--anchor {
+  width: 10%;
+  bottom: 2%;
+  right: 5%;
+}
+.scene3__svg--bottle {
+  width: 8%;
+  top: 60%;
+  left: 10%;
+}
+.scene3__svg--dirt {
+  width: 6%;
+  top: 10%;
+  left: 10%;
+}
+.scene3__svg--fishbone {
+  width: 8%;
+  top: 30%;
+  right: 10%;
+}
+.scene3__svg--garbage {
+  width: 8%;
+  top: 50%;
+  right: 2%;
+}
+.scene3__svg--plastic {
+  width: 8%;
+  top: 10%;
+  left: 25%;
+}
+.scene3__svg--oil {
+  width: 13%;
+  bottom: 8%;
+  left: 25%;
+}
+.scene3__svg--bandage {
+  width: 8%;
+  bottom: 5%;
+  left: 3%;
+}
+
+.scene4__svg {
+  position: absolute;
+}
+.scene4__svg--eco {
+  width: 10%;
+  top: 5%;
+  left: 5%;
+}
+.scene4__svg--drop {
+  width: 10%;
+  top: 5%;
+  right: 5%;
+}
+.scene4__svg--nemo {
+  width: 10%;
+  top: 40%;
+  left: 5%;
+}
+.scene4__svg--seaweed-pink {
+  width: 15%;
+  bottom: 0;
+  left: 5%;
+}
+.scene4__svg--seaweed-blue {
+  width: 15%;
+  bottom: 0;
+  right: 5%;
+}
+.scene4__svg--starfish {
+  width: 10%;
+  top: 40%;
+  right: 5%;
+}
+
+.scene1 {
+  position: relative;
+  background: linear-gradient(to left, #96d5ff, #d7efff);
+  height: 100vh;
+  z-index: 1;
+}
+.scene1__title {
+  font-size: 3rem;
+  position: absolute;
+  left: 2%;
+  top: 30%;
+  animation: title 1s ease-out forwards;
+  opacity: 0;
+}
+.scene1__text {
+  max-width: 30%;
+  font-size: 1rem;
+  position: absolute;
+  font-weight: bold;
+}
+.scene1__text--first {
+  left: 2%;
+  top: 45%;
+  animation: text 1.5s ease-out forwards;
+  opacity: 0;
+  animation-delay: 3s;
+}
+.scene1__text--second {
+  left: 35%;
+  top: 68%;
+  color: #f0f0f0;
+  animation: text 1.5s ease-out forwards;
+  opacity: 0;
+  animation-delay: 7s;
+}
+.scene1__surface {
+  position: absolute;
+  bottom: 40%;
+  width: 100%;
+  height: 20vh;
+  background-image: linear-gradient(to bottom, #ffeed7, #ddb888);
+  z-index: 0;
+}
+.scene1__ocean {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40vh;
+  background: linear-gradient(to bottom, #96d5ff, #263b80);
+  z-index: 0;
+}
+.scene1__svg--sun, .scene1__svg--cloud, .scene1__svg--beach, .scene1__svg--umbrella, .scene1__svg--bird, .scene1__svg--fish1, .scene1__svg--fish2, .scene1__svg--turtle, .scene1__svg--wave, .scene1__svg--crab, .scene1__title, .scene1__text {
+  z-index: 1;
+}
+
+@keyframes title {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes text {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.scene2 {
+  position: relative;
+  background: linear-gradient(to top, #0b46b4, #263b80);
+  height: 100vh;
+  color: #f0f0f0;
+  z-index: 2;
+}
+.scene2__text {
+  max-width: 50%;
+  font-size: 1.5rem;
+  position: absolute;
+  font-weight: bold;
+}
+.scene2__text--first {
+  top: 15%;
+  left: 10%;
+}
+.scene2__text--second {
+  top: 50%;
+  left: 50%;
+}
+.scene2__text--third {
+  top: 80%;
+  right: 20%;
+}
+
+.scene3 {
+  position: relative;
+  background: linear-gradient(to bottom, #263b80, #000814);
+  color: #f0f0f0;
+  overflow: hidden;
+  z-index: 3;
+  height: 100vh;
+}
+.scene3__text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  max-width: 50%;
+  position: absolute;
+}
+.scene3__text--first {
+  top: 10%;
+  left: 5%;
+}
+.scene3__text--second {
+  top: 35%;
+  left: 10%;
+}
+.scene3__text--third {
+  top: 70%;
+  left: 20%;
+}
+.scene3__svg {
+  position: absolute;
+}
+.scene3__svg--anchor {
+  width: 8%;
+  top: 10%;
+  left: 10%;
+  animation: floatDown 12s ease-in-out infinite;
+}
+.scene3__svg--bottle {
+  width: 6%;
+  top: 20%;
+  left: 30%;
+  animation: floatDown 10s ease-in-out infinite;
+}
+.scene3__svg--dirt {
+  width: 7%;
+  top: 15%;
+  right: 10%;
+  animation: floatDown 13s ease-in-out infinite;
+}
+.scene3__svg--fishbone {
+  width: 6%;
+  top: 30%;
+  left: 20%;
+  animation: floatDown 11s ease-in-out infinite;
+}
+.scene3__svg--oil {
+  width: 10%;
+  top: 5%;
+  right: 20%;
+  animation: floatDown 15s ease-in-out infinite;
+}
+.scene3__svg--garbage {
+  width: 9%;
+  top: 35%;
+  left: 50%;
+  animation: floatDown 14s ease-in-out infinite;
+}
+.scene3__svg--plastic {
+  width: 8%;
+  top: 10%;
+  left: 65%;
+  animation: floatDown 13s ease-in-out infinite;
+}
+.scene3__svg--bandage {
+  width: 6%;
+  top: 25%;
+  right: 5%;
+  animation: floatDown 10s ease-in-out infinite;
+}
+@keyframes floatDown {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 0.3;
+  }
+}
+
+.scene4 {
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(to bottom, black 0%, #263b80 30%, #96d5ff 60%, #d7efff 100%);
+  color: #f0f0f0;
+  z-index: 4;
+}
+.scene4__text {
+  max-width: 70%;
+  font-size: 1rem;
+  position: absolute;
+  font-weight: bold;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.scene4__text--first {
+  top: 8%;
+}
+.scene4__text--second {
+  top: 20%;
+  font-size: 1.5rem;
+}
+.scene4__text--third {
+  top: 35%;
+  background-color: rgb(7, 43, 67);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.scene4__text--fourth {
+  top: 55%;
+  font-size: 0.75rem;
+  color: #393939;
+}
+.scene4__text--fifth {
+  top: 70%;
+  color: #393939;
+}
+.scene4__link {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.scene4__button {
+  text-decoration: none;
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+button {
+  display: block;
+  background-color: #0b46b4;
+  color: #f0f0f0;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  cursor: pointer;
+}
+button:hover {
+  background-color: #263b80;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.m {
+  margin: 1rem;
+}
+
+.m-l {
+  margin: 2rem;
+}
+
+.mt {
+  margin-top: 1rem;
+}
+
+.mb {
+  margin-bottom: 1rem;
+}
+
+.ml {
+  margin-left: 1rem;
+}
+
+.mr {
+  margin-right: 1rem;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.p {
+  padding: 1rem;
+}
+
+.p-l {
+  padding: 2rem;
+}
+
+.pt {
+  padding-top: 1rem;
+}
+
+.pb {
+  padding-bottom: 1rem;
+}
+
+.pl {
+  padding-left: 1rem;
+}
+
+.pr {
+  padding-right: 1rem;
+}
+
+/*# sourceMappingURL=styles.scss.map */

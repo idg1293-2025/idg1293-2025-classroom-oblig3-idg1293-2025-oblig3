@@ -1,0 +1,234 @@
+@use '../base/global' as *;
+
+// SCENE 1 - ABOVE THE SURFACE
+// SVG positions for scene 1
+.scene1 {
+    &__svg {
+        position: absolute; // all svg elements are absolute
+        
+        &--sun {
+            width: 12%;
+            top: 2%;
+            left: 2%;
+            animation: sun 5s infinite ease-in-out;
+        }
+        &--cloud {
+            width: 10%;
+            top: 5%;
+            right: 15%;
+            animation: cloud 3s linear infinite;
+        }
+        &--bird {
+            width: 5%;
+            top: 10%;
+            left: 50%;
+        }
+        &--beach {
+            width: 7%;
+            top: 43%;
+            right: 8%;
+        }
+        &--umbrella {
+            width: 7%;
+            top: 42%;
+            right: 25%;
+        }
+        &--turtle {
+            width: 5%;
+            top: 80%;
+            left: 20%;
+        }
+        &--fish1 {
+            width: 5%;
+            top: 70%;
+            right: 20%;
+        }
+        &--fish2 {
+            width: 5%;
+            top: 70%;
+            left: 10%;
+        }
+        &--wave {
+            width: 25%;
+            bottom: 0;
+            left: 40%;
+            opacity: 0.3;
+            animation: wave 5s ease-in-out infinite;
+        }
+        &--crab {
+            width: 3%;
+            top: 52%;
+            left: 40%;
+        }
+        &--turtle,
+        &--fish1,
+        &--fish2 {
+            animation: swim 3s ease-in-out infinite;
+        }
+    }
+}
+// Animations for scene 1
+@keyframes sun {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+@keyframes cloud {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+@keyframes swim {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(15px); }
+}
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+
+// SCENE 2 - THE OCEAN'S BEAUTY
+
+// SVG positions for scene 2
+.scene2 {
+    &__svg {
+        position: absolute; // all svg elements are absolute
+        
+        &--seaweed1 {
+            width: 15%;
+            bottom: 0;
+            left: 0;
+        }
+        &--seaweed2 {
+            width: 15%;
+            bottom: 0;
+            right: 2%;
+        }
+        &--dolphin {
+            width: 15%;
+            top: 20%;
+            right: 20%;
+        }
+        &--jellyfish {
+            width: 10%;
+            top: 10%;
+            right: 10%;
+        }
+        &--seabottom {
+            width: 15%;
+            bottom: 0;
+            left: 15%;
+        }
+        &--fishes {
+            width: 15%;
+            top: 40%;
+            left: 25%;
+        }
+        &--green-fish {
+            width: 8%;
+            top: 50%;
+            left: 8%;
+        }
+    }
+}
+
+// Animations for scene 2
+
+
+// SCENE 3 - THE THREATS
+
+// SVG positions for scene 3
+.scene3 {
+    &__svg {
+        position: absolute; // all svg elements are absolute
+        
+        &--anchor {
+            width: 10%;
+            bottom: 2%;
+            right: 5%;
+        }
+        &--bottle {
+            width: 8%;
+            top: 60%;
+            left: 10%;
+        }
+        &--dirt {
+            width: 6%;
+            top: 10%;
+            left: 10%;
+        }
+        &--fishbone {
+            width: 8%;
+            top: 30%;
+            right: 10%;
+        }
+        &--garbage {
+            width: 8%;
+            top: 50%;
+            right: 2%;
+        }
+        &--plastic {
+            width: 8%;
+            top: 10%;
+            left: 25%;
+        }
+        &--oil {
+            width: 13%;
+            bottom: 8%;
+            left: 25%;
+        }
+        &--bandage {
+            width: 8%;
+            bottom: 5%;
+            left: 3%;
+        }
+    }
+}
+// Animations for scene 3
+
+
+// SCENE 4 - CALL TO ACTION
+
+// SVG positions for scene 4
+.scene4 {
+    &__svg {
+        position: absolute; // all svg elements are absolute
+    
+        &--eco {
+            width: 10%;
+            top: 5%;
+            left: 5%;
+        }
+        &--drop {
+            width: 10%;
+            top: 5%;
+            right: 5%;
+        }
+        &--nemo {
+            width: 10%;
+            top: 40%;
+            left: 5%;
+        }
+        &--seaweed-pink {
+            width: 15%;
+            bottom: 0;
+            left: 5%;
+        }
+        &--seaweed-blue {
+            width: 15%;
+            bottom: 0;
+            right: 5%;
+        }
+        &--starfish {
+            width: 10%;
+            top: 40%;
+            right: 5%;
+        }
+    }
+}
+
+// Animations for scene 4
+
+
+
+

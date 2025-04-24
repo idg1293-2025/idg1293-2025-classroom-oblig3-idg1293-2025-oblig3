@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oblig 3: Storytelling</title>
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet"> <!-- Fonts-->
+    <script src="assets/scripts/script.js"></script>
+</head>
+<body>
+    <!-- Scene 1: Introduction - Above the surface-->
+    <section class="scene scene1">
+
+        <!-- svgs -->
+        <img class="scene1__svg scene1__svg--sun" src="assets/images/scene1/sun.svg" alt="Sun">
+        <img class="scene1__svg scene1__svg--cloud" src="assets/images/scene1/cloud.svg" alt="Cloud">
+        <!--<img class="scene1__svg scene1__svg--bird" src="assets/images/scene1/bird.svg" alt="Bird flying">-->
+        <img class="scene1__svg scene1__svg--fish1" src="assets/images/scene1/fish1.svg" alt="Fish 1">
+        <img class="scene1__svg scene1__svg--fish2" src="assets/images/scene1/fish2.svg" alt="Fish 2">
+        <img class="scene1__svg scene1__svg--turtle" src="assets/images/scene1/turtle.svg" alt="Turtle">
+        <img class="scene1__svg scene1__svg--wave" src="assets/images/scene1/wave.svg" alt="Sea Wave">
+        <img class="scene1__svg scene1__svg--crab" src="assets/images/scene1/crab.svg" alt="Crab">
+        <img class="scene1__svg scene1__svg--umbrella" src="assets/images/scene1/umbrella.svg" alt="Beach umbrella">
+        <img class="scene1__svg scene1__svg--beach" src="assets/images/scene1/beach.svg" alt="Beach sign">
+        <svg class="scene1__surface"></svg>
+        <svg class="scene1__ocean"></svg>
+
+        <svg class="scene1__svg--bird" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 7%; right: 0; width: 100vw;">
+            <!-- path fly forward-->
+            <path id="fly-path" d="M0,100 C100,50 300,150 400,100" fill="none" stroke="transparent"/>
+            <!-- path fly back -->
+            <path id="fly-back" d="M400,100 C300,150 100,50 0,100" fill="none" stroke="transparent"/>
+            
+            <image href="assets/images/scene1/bird.svg" width="30" height="30">
+            <!-- fly forward -->
+            <animateMotion id="forward" dur="6s" repeatCount="1" begin="0s;back.end" >
+                <mpath href="#fly-path" />
+            </animateMotion>
+            <!-- fly back -->
+            <animateMotion id="back" dur="6s" repeatCount="1" begin="forward.end">
+                <mpath href="#fly-back" />
+            </animateMotion>
+            </image>
+        </svg>
+
+        <h1 class="scene1__title mb">Goal 14: Life Below Water</h1>
+        <p class="scene1__text scene1__text--first">Did you know that oceans cover more than 70% of our planet?</p>
+        <p class="scene1__text scene1__text--second">They're like the Earth's life support system, providing food and homes for billions of people and animals.</p>
+        
+    </section>
+
+<!-- Scene 2: Water - The ocean's beauty -->
+    <section class="scene scene2">
+
+        <img class="scene2__svg scene2__svg--seaweed1" src="assets/images/scene2/seaweed.svg" alt="Seaweed 1">
+        <img class="scene2__svg scene2__svg--seaweed2" src="assets/images/scene2/seaweed1.svg" alt="Seaweed 2">
+        <img class="scene2__svg scene2__svg--jellyfish" src="assets/images/scene2/jellyfish2.svg" alt="Jellyfish">
+        <img class="scene2__svg scene2__svg--dolphin" src="assets/images/scene2/dolphin.svg" alt="Dolphin">
+        <img class="scene2__svg scene2__svg--seabottom" src="assets/images/scene2/sea-bottom.svg" alt="Sea bottom">
+        <img class="scene2__svg scene2__svg--fishes" src="assets/images/scene2/fishes.svg" alt="Several fishes">
+        <img class="scene2__svg scene2__svg--green-fish" src="assets/images/scene2/fish3.svg" alt="Green fish">
+
+        <p class="scene2__text scene2__text--first">Beneath the waves is an underwater paradise — coral reefs, sparkling fish, and all kinds of creatures.</p>
+        <p class="scene2__text scene2__text--second">The ocean regulates our climate, provides food, and is home to amazing ecosystems.</p>
+        <p class="scene2__text scene2__text--third">Let's dive in and see what’s going on beneath the surface!</p>
+    </section>
+
+<!-- Scene 3: Pollution - The threats -->
+    <section class="scene scene3">
+        <!-- svgs -->
+        <img class="scene3__svg scene3__svg--anchor" src="assets/images/scene3/anchor.svg" alt="Anchor">
+        <img class="scene3__svg scene3__svg--bottle" src="assets/images/scene3/bottle.svg" alt="Bottle">
+        <img class="scene3__svg scene3__svg--dirt" src="assets/images/scene3/dirt.svg" alt="Dirt">
+        <img class="scene3__svg scene3__svg--fishbone" src="assets/images/scene3/fishbone.svg" alt="Fish bone">
+        <img class="scene3__svg scene3__svg--oil" src="assets/images/scene3/oil.svg" alt="Oil spill">
+        <img class="scene3__svg scene3__svg--garbage" src="assets/images/scene3/garbagecan.svg" alt="Garbage can">
+        <img class="scene3__svg scene3__svg--plastic" src="assets/images/scene3/plasticbag.svg" alt="Plastic bag">
+        <img class="scene3__svg scene3__svg--bandage" src="assets/images/scene3/bandage.svg" alt="Bandage wound">
+
+
+        <p class="scene3__text scene3__text--first">But things are changing and the oceans are in trouble. </p>
+        <p class="scene3__text scene3__text--second">The ocean isn't the beautiful place it once was. Pollution is everywhere: 
+            plastic waste, oil spills, abandoned fishing nets.</p>
+        <p class="scene3__text scene3__text--third">Every year, millions of tons of plastic end up in the ocean, harming fish, coral reefs, and even the air we breathe.</p>
+    </section>
+
+<!-- Scene 4: Call to action-->
+    <section class="scene scene4">
+        <!-- svg -->
+        <img class="scene4__svg scene4__svg--eco" src="assets/images/scene4/eco.svg" alt="Eco sign">
+        <img class="scene4__svg scene4__svg--nemo" src="assets/images/scene4/nemo.svg" alt="Nemo fish">
+        <img class="scene4__svg scene4__svg--seaweed-pink" src="assets/images/scene4/seaweed-pink.svg" alt="Seaweed pink">
+        <img class="scene4__svg scene4__svg--seaweed-blue" src="assets/images/scene4/seaweed2.svg" alt="Seaweed blue">
+        <img class="scene4__svg scene4__svg--drop" src="assets/images/scene4/drop.svg" alt="Drop in the ocean">
+        <img class="scene4__svg scene4__svg--starfish" src="assets/images/scene4/starfish.svg" alt="Red starfish">
+
+        <p class="scene4__text scene4__text--first"> It’s time to act. Together, we can make a real difference and protect the ocean for future generations.</p>
+        <p class="scene4__text scene4__text--second">So, what can you do? </p>
+        <p class="scene4__text scene4__text--third">We can all make a difference! Use less plastic, support eco-friendly brands, and get involved in beach cleanups. Every small action counts!</p>
+        <p class="scene4__text scene4__text--fourth">Ocean acidification (Target 14.3) is getting worse, and illegal fishing (Target 14.6) is threatening marine ecosystems. By taking action, 
+            we can help protect our oceans for future generations</p>
+        <p class="scene4__text scene4__text--fifth">The ocean needs us more than ever, and together, we can make a real impact. Let’s step up and show some love for the sea! </p>
+
+        <a class="scene4__link" href="https://sdgs.un.org/goals/goal14#progress_and_info" target="_blank">Read more about goal 14</a>
+        <a class="scene4__button" href="https://theoceancleanup.com/?utm_source=google&utm_medium=cpc&utm_campaign=&gad_source=1&gbraid=0AAAAADn-W3oDAvvQRooPJztxE42DaIYhc&gclid=CjwKCAjwn6LABhBSEiwAsNJrjmkZILksWB2jyeAzqhMkfvpq7vDiQRN1D2pbM_14LQG4fnAdkmdq9hoClwoQAvD_BwE" target="_blank">
+            <button>Join to save the ocean</button>
+        </a>
+    </section>
+</body>
+</html>

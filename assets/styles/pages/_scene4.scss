@@ -1,0 +1,76 @@
+@use '../base/global' as *;
+
+.scene4 {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(to bottom, black 0%, $primary-color 30%, $secondary-color 60%, $tertiary-color 100%);
+    color: $text-color-light;
+    z-index: 4;
+
+    &__text {
+        max-width: 70%;
+        font-size: $font-m;
+        position: absolute;
+        font-weight: bold;
+        text-align: center;
+        left: 50%; 
+        transform: translateX(-50%);
+
+        &--first {
+            top: 8%;
+            
+        }
+        &--second {
+            top: 20%;
+            font-size: $font-l;
+        }
+        &--third {
+            top: 35%;
+            background-color: $dark-color;
+            padding: $spacing-m;
+            border-radius: 1rem;
+        }
+        &--fourth {
+            top: 55%;
+            font-size: $font-s;
+            color: $text-color-dark;
+
+        }
+        &--fifth {
+            top: 70%;
+            color: $text-color-dark;
+        }
+    }
+
+    &__link {
+        position: absolute;
+        bottom: 10%;
+        left: 50%; 
+        transform: translateX(-50%);
+    }
+
+    &__button {
+        text-decoration: none;
+        position: absolute;
+        bottom: 1%;
+        left: 50%; 
+        transform: translateX(-50%);
+    }
+
+    
+}
+
+button {
+    display: block;
+    background-color: $button-color;
+    color: $text-color-light;
+    border: 1px solid transparent; 
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: clamp($font-s, 2vw, $font-m);
+    cursor: pointer;
+
+    &:hover {
+        background-color: $primary-color;
+    }
+}
