@@ -1,0 +1,49 @@
+@use '../base/global' as *;
+@use '../base/intersectionObserver' as *;
+
+.acts {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(to bottom, $tertiary-color, $secondary-color);
+    color: $text-color-light;
+
+    &__text {
+        max-width: 70%;
+        color: $text-color-dark;
+        font-weight: bold;
+        text-align: center;
+        position: absolute;
+        left: 50%; 
+        transform: translateX(-50%);
+
+        &--first {
+            top: 40vh;
+            font-size: $font-l;
+
+        }
+        &--second {
+            bottom: 15vh;
+        }
+    }
+
+    &__svg {
+        position: absolute; 
+    
+        &--eco {
+            width: 15vh;
+            top: 5%;
+            left: 50%; 
+            transform: translateX(-50%);
+        }
+        &--nemo {
+            width: 15vh;
+            top: 40%;
+            left: 5%;
+        }
+        &--starfish {
+            width: 15vh;
+            top: 40%;
+            right: 5%;
+        }
+    }
+}

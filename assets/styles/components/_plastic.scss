@@ -1,0 +1,48 @@
+@use '../base/global' as *;
+@use '../base/intersectionObserver' as *;
+
+.plastic {
+    height: 100vh;
+    position: relative;
+    background-color: black;
+    color: $text-color-light;
+
+    &__text {
+        max-width: 50%;
+        font-size: $font-l;
+        position: absolute;
+        font-weight: bold;
+        top: 20%;
+        left: 30%;
+    }
+
+    &__svg {
+        position: absolute; // all svg elements are absolute
+        
+        &--fishbone1 {
+            width: 20vh;
+            top: 50%;
+            left: 5%;
+        }
+        &--fishbone2 {
+            width: 15vh;
+            top:60%;
+            left: 18%;
+        }
+        &--garbage {
+            width: 20vh;
+            top: 50%;
+            right: 15%;
+        }
+        &--plastic {
+            width: 15vh;
+            bottom: 20%;
+            left: 50%;
+        }
+        &--bandage {
+            width: 10vh;
+            top: 5%;
+            right: 10%;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@use '../base/global' as *;
+@use '../base/intersectionObserver' as *;
+
+.sky {
+  position: relative;
+  background: linear-gradient(to left, $secondary-color, $tertiary-color);
+  height: 100vh;
+  z-index: 1;
+
+  &__text {
+    max-width: 30%;
+    font-size: $font-l;
+    position: absolute;
+    font-weight: bold;
+    left: 20%;
+    top: 50%;
+  }
+
+  &__svg {
+    position: absolute;
+
+    &--sun {
+      width: 20vh;
+      top: 2%;
+      left: 5%;
+      animation: sun 5s infinite ease-in-out;
+    }
+
+    &--cloud {
+      width: 20vh;
+      top: 5%;
+      right: 15%;
+      animation: cloud 5s linear infinite;
+    }
+
+    &--bird {
+      top: 10%;
+      left: 50%;
+    }
+  }
+}
+
+// keyframe animations for sun and cloud
+@keyframes sun {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+@keyframes cloud {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(30px); }
+  100% { transform: translateX(0); }
+}

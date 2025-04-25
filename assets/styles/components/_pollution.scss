@@ -1,0 +1,44 @@
+@use '../base/global' as *;
+@use '../base/intersectionObserver' as *;
+
+.pollution {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(to bottom, $dark-color, black);
+    color: $text-color-light;
+
+    &__text {
+        max-width: 50%;
+        font-size: $font-l;
+        position: absolute;
+        font-weight: bold;
+        top: 40%;
+        left: 10%;
+    }
+
+    &__svg {
+        position: absolute; // all svg elements are absolute
+        
+        &--anchor {
+            width: 30vh;
+            bottom: 15%;
+            right: 10%;
+        }
+        &--bottle {
+            width: 15vh;
+            top: 60%;
+            left: 10%;
+        }
+        &--dirt {
+            width: 10vh;
+            top: 15%;
+            right: 10%;
+        }
+        
+        &--oil {
+            width: 40vh;
+            bottom: 8%;
+            left: 25%;
+        }
+    }
+}

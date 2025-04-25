@@ -1,0 +1,38 @@
+@use '../base/global' as *;
+@use '../base/intersectionObserver' as *;
+
+.corals {
+    position: relative;
+    background: linear-gradient(to top, $button-color, $primary-color);
+    height: 100vh;
+    color: $text-color-light;
+
+    &__text {
+        max-width: 50%;
+        font-size: $font-l;
+        position: absolute;
+        font-weight: bold;
+        top: 20%;
+        left: 10%;
+    }
+
+    &__svg {
+        position: absolute; // all svg elements are absolute
+        
+        &--seaweed1 {
+            width: 50vh;
+            bottom: 0;
+            left: 0;
+        }
+        &--seaweed2 {
+            width: 50vh;
+            bottom: 0;
+            right: 0;
+        }
+        &--seabottom {
+            width: 50vh;
+            bottom: 0;
+            left: 40%;
+        }
+    }
+}
