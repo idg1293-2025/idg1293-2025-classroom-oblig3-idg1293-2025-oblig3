@@ -1,0 +1,57 @@
+ // Intersection observer 
+
+ // all components with text and svg
+ .acts,
+ .beach,
+ .changing,
+ .corals,
+ .cta, 
+ .ecosystems,
+ .plastic,
+ .pollution,
+ .readmore,
+ .scroll,
+ .sky {
+    &__text, 
+    &__svg {
+        //only visible when in viewport
+        opacity: 0; //invisible
+        transform: translateY(30px); 
+        transition: opacity 1s ease;
+
+        .visible & { // & means text and svg here
+        opacity: 1;
+       
+        }
+    }
+}
+ 
+// component with surface and ocean
+.beach {    
+    &__surface,
+    &__ocean {
+        //only visible when in viewport
+        opacity: 0; //invisible
+        transform: translateY(30px); 
+        transition: opacity 1s ease;
+
+        .visible & { // & means surface and ocean here
+            opacity: 1;
+        }
+    }
+}
+
+// component with link and button
+ .readmore {
+    &__link,
+    &__button {
+        //only visible when in viewport
+        opacity: 0; //invisible
+        transform: translateY(30px); 
+        transition: opacity 1s ease;
+
+        .visible & { // & means link and button here
+            opacity: 1;
+        }
+    }
+ }

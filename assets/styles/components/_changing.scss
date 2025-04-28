@@ -1,0 +1,26 @@
+@use '../base/global' as *;
+@use '../base/intersectionObserver' as *;
+
+.changing {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(to bottom, $button-color, $dark-color, $dark-color);
+    color: $text-color-light;
+
+    &__text {
+        max-width: 50%;
+        font-size: $font-xl;
+        position: absolute;
+        font-weight: bold;
+        top: 15%;
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .changing__text {
+      max-width: 90%;
+      font-size: 2rem;
+      left: 5%;
+    }
+  }

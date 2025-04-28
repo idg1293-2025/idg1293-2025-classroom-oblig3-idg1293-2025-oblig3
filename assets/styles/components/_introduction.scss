@@ -1,0 +1,28 @@
+@use '../base/global' as *;
+
+.introduction {
+    position: relative;
+    background: linear-gradient(to left, $secondary-color, $tertiary-color);
+    height: 100vh;
+    z-index: 1;
+
+    &__title {
+        font-size: $font-xl;
+        position: absolute;
+        top: 30%;
+        left: 50%; 
+        transform: translateX(-50%); // centering
+        animation: title 1.5s ease-out forwards;
+    }
+}
+
+@keyframes title {
+    0% { 
+      opacity: 0; 
+      transform: translateX(-50%) translateY(20px); 
+    }
+    100% { 
+      opacity: 1; 
+      transform: translateX(-50%) translateY(0); 
+    }
+  }

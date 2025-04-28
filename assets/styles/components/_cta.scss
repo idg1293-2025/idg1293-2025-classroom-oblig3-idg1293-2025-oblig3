@@ -1,0 +1,62 @@
+@use '../base/global' as *;
+@use '../base/intersectionObserver' as *;
+
+.cta {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(to bottom, $secondary-color, $tertiary-color);
+    color: $text-color-dark;
+
+    &__text {
+        max-width: 70%;
+        position: absolute;
+        font-weight: bold;
+        text-align: center;
+        left: 50%; 
+        transform: translateX(-50%);
+
+        &--first {
+            top: 15%;
+        }
+        &--second {
+            top: 35%;
+            font-size: $font-xl;
+        }
+    }
+
+    &__svg {
+        position: absolute;
+        width: 15vh;
+        bottom: 8%;
+        left: 50%; 
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+  
+    .cta__text--first {
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.2rem;
+      text-align: center;
+      max-width: 90%;
+    }
+  
+    .cta__text--second {
+      top: 50%; /* <- Flytt denne MYYYE lengre ned */
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      text-align: center;
+      max-width: 90%;
+    }
+  
+    .cta__svg {
+      width: 10vh;
+      bottom: 8%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
