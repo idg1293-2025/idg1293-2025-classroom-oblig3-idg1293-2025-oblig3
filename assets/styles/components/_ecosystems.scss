@@ -1,0 +1,57 @@
+@use '../base/global' as *;
+@use '../base/intersectionObserver' as *;
+
+.ecosystems {
+    position: relative;
+    background: linear-gradient(to bottom, $button-color, $primary-color);
+    height: 100vh;
+    color: $text-color-light;
+
+    &__text {
+        max-width: 90%;
+        font-size: clamp($font-m, 4vw, $font-l);
+        position: absolute;
+        font-weight: bold;
+        top: 10%;
+        left: 5%;
+        z-index: 10;
+    }
+
+    &__svg {
+        position: absolute; // all svg elements are absolute
+     
+        &--dolphin {
+            width: 50vh;
+            top:40%;
+            right: 20%;
+        }
+        &--jellyfish {
+            width: 15vh;
+            top: 20%;
+            right: 10%;
+        }
+        &--fishes {
+            width: 25vh;
+            top: 22%;
+            left: 15%;
+        }
+        &--green-fish {
+            width: 20vh;
+            bottom: 10%;
+            left: 10%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &__svg {
+            &--jellyfish,
+            &--fishes,
+            &--green-fish {
+                width: 12vh;  
+            }
+            &--dolphin {
+                width: 30vh;
+            }
+        }
+    }
+}

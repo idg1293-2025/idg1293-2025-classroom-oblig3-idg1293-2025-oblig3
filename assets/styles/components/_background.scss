@@ -1,0 +1,7 @@
+@use '../base/global' as *;
+
+.blue-background {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(to bottom, black, $primary-color, $secondary-color);
+}

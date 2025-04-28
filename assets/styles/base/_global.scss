@@ -1,0 +1,72 @@
+// colors
+$primary-color: #263b80;
+$secondary-color: #96d5ff;
+$tertiary-color: #d7efff;
+$dark-color: rgb(7, 43, 67);
+$button-color: #0b46b4;
+
+$text-color-dark: #393939;
+$text-color-light: #f0f0f0;
+
+// fonts
+$font-text: 'Quicksand', sans-serif;
+$font-title: 'Bebas Neue', 'Arial Black', sans-serif;
+$font-s: 0.75rem;
+$font-m: 1rem;
+$font-l: 1.5rem;
+$font-xl: 4rem;
+
+// spacing
+$spacing-s: 0.5rem;
+$spacing-m: 1rem;
+$spacing-l: 2rem;
+$spacing-xl: 3rem;
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth; //smooth scrolling
+    overflow-x: hidden;
+}
+
+body {
+    color: $text-color-dark;
+    font-family: $font-text;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $font-title;
+    color: $text-color-dark;
+}
+
+a {
+    color: $text-color-dark;
+    text-decoration: none;
+
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: $secondary-color;
+    padding: 1rem;
+    text-align: center;
+}
+
+// If user has turned off animations 
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+

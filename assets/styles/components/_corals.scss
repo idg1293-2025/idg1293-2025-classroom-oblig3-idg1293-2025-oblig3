@@ -1,0 +1,70 @@
+@use '../base/global' as *;
+@use '../base/intersectionObserver' as *;
+
+.corals {
+    position: relative;
+    background: linear-gradient(to top, $button-color, $primary-color);
+    height: 100vh;
+    color: $text-color-light;
+    
+
+    &__text {
+        max-width: 80%;
+        font-size: clamp($font-m, 4vw, $font-l);
+        position: absolute;
+        font-weight: bold;
+        top: 20%;
+        left: 10%;
+    }
+
+    &__svg {
+        position: absolute; // all svg elements are absolute
+        
+        &--seaweed1 {
+            bottom: 0;
+            left: 0;
+        }
+        &--seaweed2 {
+            bottom: 0;
+            right: 2%;
+        }
+        &--seabottom {
+            bottom: 0;
+            left: 35%;
+        }
+
+        &--seaweed1,
+        &--seaweed2,
+        &--seabottom {
+            width: 50vh; 
+        }
+    }
+
+    @media screen and (max-width: 1400px) {
+        &__svg {
+            &--seaweed2 {
+                display: none;
+            }
+            &--seabottom {
+                left: 50%;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        &__svg {
+            &--seaweed1,
+            &--seabottom {
+                width: 40vw; 
+                bottom: 5%;
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        &__svg {
+            &--seaweed1,
+            &--seabottom {
+                width: 30vw;
+            }
+        }
+    }
+}
