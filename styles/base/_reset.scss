@@ -1,0 +1,18 @@
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base */
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: $font-family;
+}
+
+
